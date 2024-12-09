@@ -1,6 +1,8 @@
+variable "project_name" {
+  description = "Project name"
+}
 
-
-variable "region" {
+variable "aws_region" {
   description = "This is the cloud hosting region where your webapp will be deployed."
   default = "ap-northeast-1"
 }

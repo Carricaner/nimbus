@@ -10,43 +10,7 @@
 
 ## TODO
 - Use Terraform Docker image
+- Create a IAM user to be used by my local computer
+- Configure AWS S3 backend
 
 
-### Recommended structure by ChatGPT
-```
-terraform-project/
-├── envs/
-│   ├── dev/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── backend.tf
-│   ├── staging/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── backend.tf
-│   └── prod/
-│       ├── main.tf
-│       ├── variables.tf
-│       ├── outputs.tf
-│       └── backend.tf
-├── modules/
-│   ├── network/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── compute/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   └── storage/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-├── shared/
-│   ├── variables.tf
-│   ├── providers.tf
-│   └── outputs.tf
-└── terraform.tfvars
-```
