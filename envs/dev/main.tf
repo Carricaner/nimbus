@@ -10,3 +10,8 @@ data "aws_availability_zones" "available" {
     values = ["not-opted-in", "opted-in"]
   }
 }
+
+resource "aws_iam_policy" "terraform_2024_12_09_demo_policy" {
+  name   = "terraform_2024_12_09_demo_policy"
+  policy = file("terraform_2024_12_09_demo_policy.json")
+}

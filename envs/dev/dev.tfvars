@@ -1,1 +1,1 @@
-owner        = "Ricky-the-biggggg-frog-friend-of-twen"
+owner = "Ricky-the-biggggg-frog-friend-of-twen"

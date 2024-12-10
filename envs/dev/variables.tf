@@ -4,7 +4,7 @@ variable "project_name" {
 
 variable "aws_region" {
   description = "This is the cloud hosting region where your webapp will be deployed."
-  default = "ap-northeast-1"
+  default     = "ap-northeast-1"
 }
 
 variable "owner" {

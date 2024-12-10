@@ -6,4 +6,11 @@ terraform {
     encrypt        = true
     dynamodb_table = "nimbus-dev-lock"
   }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.80"
+    }
+  }
 }
