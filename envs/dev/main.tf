@@ -11,7 +11,6 @@ data "aws_availability_zones" "available" {
   }
 }
 
-resource "aws_iam_policy" "terraform_2024_12_09_demo_policy" {
-  name   = "terraform_2024_12_09_demo_policy"
-  policy = file("terraform_2024_12_09_demo_policy.json")
+module "iterator" {
+  source = "../../modules/iterator"
 }

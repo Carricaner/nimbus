@@ -13,3 +13,7 @@ output "owner" {
 output "aws_available_zones" {
   value = data.aws_availability_zones.available
 }
+
+output "module_path" {
+  value = path.module
+}
