@@ -1,3 +1,3 @@
-module "step_functions" {
-  source = "./step-functions"
+module "eventbridge" {
+  source = "./eventbridge"
 }
