@@ -4,7 +4,7 @@ data "archive_file" "function_zip" {
     output_path = "${path.module}/handler.zip"
 }
 
-resource "aws_lambda_function" "sub-minute-iterator" {
+resource "aws_lambda_function" "sub_minute_iterator" {
   function_name = "nimbus_sub_minute_iterator"
   runtime       = "python3.13"
   role          = aws_iam_role.iterator_lambda_role.arn
