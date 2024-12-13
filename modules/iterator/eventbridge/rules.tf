@@ -4,7 +4,7 @@ resource "aws_cloudwatch_event_rule" "nimbus_dev_1_rule" {
 
   event_pattern = jsonencode(
     {
-        source = ["com.twen"]
-        detail-type = ["com.twen"]
+      source = ["com.twen"]
+      detail-type = ["com.twen"]
     })
 }
