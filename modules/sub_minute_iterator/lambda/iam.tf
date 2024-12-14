@@ -2,11 +2,12 @@ locals {
   policy_path = "${path.module}/policy"
 
   iam_policy_params = {
-    iam_policy_name = "${var.project_name}_iterator_lambda_iam_policy"
+    iam_policy_name = "${var.project_name}_iterator_function_iam_policy"
     iam_polcy_file_path = "${local.policy_path}/iam_policy.json"
   }
+
   iam_role_params = {
-    iam_role_name = "${var.project_name}_iterator_lambda_role"
+    iam_role_name = "${var.project_name}_iterator_function_role"
     assume_role_policy_file_path = "${local.policy_path}/assume_role_policy.json"
   }
 }
