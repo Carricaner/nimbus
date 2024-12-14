@@ -1,0 +1,3 @@
+module "eventbridge" {
+  source = "./eventbridge"
+}
