@@ -4,7 +4,10 @@
       {
         "Effect": "Allow",
         "Principal": {
-          "Service": "events.amazonaws.com"
+          "Service": [
+            "events.amazonaws.com",
+            "scheduler.amazonaws.com"
+          ]
         },
         "Action": "sts:AssumeRole"
       }

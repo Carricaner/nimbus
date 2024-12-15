@@ -10,7 +10,7 @@
 
 ## TODO
 - Use Terraform Docker image
-- Create a IAM user to be used by my local computer
+- [V] Create a IAM user to be used by my local computer
 - Configure AWS S3 backend
 
 
