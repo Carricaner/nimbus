@@ -1,5 +1,5 @@
-resource "aws_cloudwatch_event_rule" "nimbus_dev_1_rule" {
-  name        = "nimbus-dev-1-rule"
+resource "aws_cloudwatch_event_rule" "dev_1_rule" {
+  name        = "${var.project_name}_dev_1_rule"
   event_bus_name = aws_cloudwatch_event_bus.nimbus_dev.name
 
   event_pattern = jsonencode(
