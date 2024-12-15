@@ -16,8 +16,17 @@ resource "aws_scheduler_schedule" "nimbus_dev_scheduler" {
       source = "com.twen"
     }
     input = jsonencode({
-      "index" = 10
-      "count" = 12
+      "index"= 10
+      "count"= 12
+      "targets": [
+        {
+          "type"= "aws-lambda"
+          "function_name"= "canada-calculator"
+          "payload"= {
+            "data"= "twen"
+          }
+        }
+      ]
     })
   }
 }

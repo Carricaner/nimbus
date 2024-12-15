@@ -4,10 +4,6 @@
   "States": {
     "ConfigureCount": {
       "Type": "Pass",
-      "Parameters": {
-        "index.$": "$.index",
-        "count.$": "$.count"
-      },
       "ResultPath": "$.iterator",
       "Next": "Iterator"
     },
