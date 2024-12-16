@@ -1,3 +1,14 @@
+## Commands
+- Build the infrastrucutre
+    
+    ```
+    make apply
+    ```
+    other commands like
+    ```
+    make plan ENV=prod
+    ```
+
 ## Notes
 - After moving into the env folder, apply it with a command like
     
@@ -9,8 +20,11 @@
     - The order of files matters, since the latter will overwrite the former's values.
 
 ## TODO
-- Use Terraform Docker image
 - [V] Create a IAM user to be used by my local computer
 - [V] Configure AWS S3 backend
 - [V] Configure DynamoDB backend
 
+
+## Archive
+- [X] Use Terraform Docker image
+    - NOT DO because the mans who conduct Terraform ought to be the man who's in charge of everything, so they should install all envs like: AWS CLI, Terraform and etc.
