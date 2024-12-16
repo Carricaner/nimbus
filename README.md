@@ -1,11 +1,13 @@
 ## Commands
 - Build the infrastrucutre
     
-    ```
+    ```bash
     make apply
     ```
+
     other commands like
-    ```
+    
+    ```bash
     make plan ENV=prod
     ```
 
