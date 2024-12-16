@@ -1,12 +1,18 @@
 variable "project_name" {
-  description = "Project name"
+  type = string
 }
 
 variable "aws_region" {
-  description = "This is the cloud hosting region where your webapp will be deployed."
-  default     = "ap-northeast-1"
+  type    = string
+  default = "ap-northeast-1"
 }
 
 variable "owner" {
-  description = "The project's owner"
+  type    = string
+  default = "Darren Li"
+}
+
+variable "environment" {
+  type    = string
+  default = "dev"
 }

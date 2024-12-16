@@ -1,8 +1,10 @@
 locals {
+  name_prefix = "${var.project_name}_${var.environment}"
+
   mail_room = {
     eventbridge = {
         event_bus = {
-            name = "${var.project_name}-${var.environment}"
+            name = "${local.name_prefix}"
         }
     }
   }

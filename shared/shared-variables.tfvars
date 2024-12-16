@@ -1,2 +1,2 @@
 project_name = "nimbus"
-owner        = "darren"
+owner        = "Darren Li"

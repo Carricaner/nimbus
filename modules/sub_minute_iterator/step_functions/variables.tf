@@ -5,3 +5,7 @@ variable "project_name" {
 variable "iterator_function_arn" {
   type = string
 }
+
+variable "environment" {
+  type = string
+}

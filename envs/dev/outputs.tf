@@ -1,7 +1,8 @@
-output "project_name" {
-  value = var.project_name
-}
-
-output "aws_region" {
-  value = var.aws_region
+output "output_info" {
+  value = {
+    "project_name" = var.project_name
+    "owner"        = var.owner
+    "environment"  = var.environment
+    "aws_region"   = var.aws_region
+  }
 }

@@ -1,1 +1,2 @@
-owner = "Ricky-the-biggggg-frog-friend-of-twen"
+aws_region  = "ap-northeast-1"
+environment = "dev"
