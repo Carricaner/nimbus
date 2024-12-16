@@ -6,7 +6,7 @@
     ```
 
     other commands like
-    
+
     ```bash
     make plan ENV=prod
     ```
@@ -25,6 +25,21 @@
 - [V] Create a IAM user to be used by my local computer
 - [V] Configure AWS S3 backend
 - [V] Configure DynamoDB backend
+- [] To deal with concurrency for a Lambda function
+
+    Ref:
+    
+    ```python
+    import boto3
+    client = boto3.client('stepfunctions')
+    def lambda_handler(event, context):
+        response = client.list_executions(
+            stateMachineArn='arn:aws:states:REGION:ACCOUNTID:stateMachine:LambdaSubMinute',
+            statusFilter='RUNNING'
+        )
+        return {
+            'alreadyRunning': len(response['executions']) > 1
+    ```
 
 
 ## Archive
