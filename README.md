@@ -11,6 +11,6 @@
 ## TODO
 - Use Terraform Docker image
 - [V] Create a IAM user to be used by my local computer
-- Configure AWS S3 backend
-
+- [V] Configure AWS S3 backend
+- [V] Configure DynamoDB backend
 
