@@ -14,7 +14,7 @@ Since AWS doesn’t provide a scheduler with period of second-level time resolut
 ## Prerequisites
 
 - Terraform
-- AWS account
+- AWS CLI
 
 ## Steps
 1. Configure AWS CLI and make sure the IAM user has corresponding rights
