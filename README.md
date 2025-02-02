@@ -1,3 +1,17 @@
+# Nimbus (Sub-minute Iterator)
+
+## Description
+
+Since AWS doesn’t provide a scheduler with period of second-level time resolution, Nimbus let users to trigger AWS Lambda functions repeatedly with second-level precision using EventBridge, Step Functions, and Terraform.
+
+## Architecture
+<img src="https://the-general.s3.ap-northeast-1.amazonaws.com/project/nimbus.svg" width="500" alt="Nimbus Architecture"/>
+
+## State Machine of Steps Functions
+
+
+<img src="https://the-general.s3.ap-northeast-1.amazonaws.com/project/stepfunctions_graph.svg" width="300" alt="State Machine"/>
+
 ## Commands
 - Build the infrastrucutre
     
