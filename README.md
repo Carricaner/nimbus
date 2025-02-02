@@ -18,21 +18,46 @@ Since AWS doesn’t provide a scheduler with period of second-level time resolut
 
 ## Steps
 1. Configure AWS CLI and make sure the IAM user has corresponding rights
+    
     ```shell
     aws configure
     ```
 
 2. Log in for Terraform
+    
     ```shell
     terraform login
     ```
 
-3. Initialize Terraform
+3. Configure the backend for Terraform under `./envs/dev/terraform.tf`, and the format is like:
+    
+    ```terraform
+    terraform {
+    backend "s3" {
+        bucket         = <the-bucket>
+        key            = <the-object-key>
+        region         = <the-regions>
+        encrypt        = true
+        dynamodb_table = <the-table-name>
+    }
+
+    required_providers {
+        aws = {
+        source  = "hashicorp/aws"
+        version = "~> 5.80"
+        }
+    }
+    }
+    ```
+
+4. Initialize Terraform
+    
     ```shell
     terraform init
     ```
 
-4. Plan & apply the infrastructure
+5. Plan & apply the infrastructure
+    
     ```shell
     make apply
     ```
