@@ -9,23 +9,35 @@ Since AWS doesn’t provide a scheduler with period of second-level time resolut
 
 ## State Machine of Steps Functions
 
+<img src="https://the-general.s3.ap-northeast-1.amazonaws.com/project/stepfunctions_graph.svg" width="270" alt="State Machine"/>
 
-<img src="https://the-general.s3.ap-northeast-1.amazonaws.com/project/stepfunctions_graph.svg" width="300" alt="State Machine"/>
+## Prerequisites
 
-## Commands
-- Build the infrastrucutre
-    
-    ```bash
+- Terraform
+- AWS account
+
+## Steps
+1. Configure AWS CLI and make sure the IAM user has corresponding rights
+    ```shell
+    aws configure
+    ```
+
+2. Log in for Terraform
+    ```shell
+    terraform login
+    ```
+
+3. Initialize Terraform
+    ```shell
+    terraform init
+    ```
+
+4. Plan & apply the infrastructure
+    ```shell
     make apply
     ```
 
-    other commands like
-
-    ```bash
-    make plan ENV=prod
-    ```
-
-## Notes
+## Other Notes
 - After moving into the env folder, apply it with a command like
     
     ```bash
@@ -36,26 +48,16 @@ Since AWS doesn’t provide a scheduler with period of second-level time resolut
     - The order of files matters, since the latter will overwrite the former's values.
 
 ## TODO
-- [V] Create a IAM user to be used by my local computer
-- [V] Configure AWS S3 backend
-- [V] Configure DynamoDB backend
-- [] To deal with concurrency for a Lambda function
-
-    Ref:
-    
-    ```python
-    import boto3
-    client = boto3.client('stepfunctions')
-    def lambda_handler(event, context):
-        response = client.list_executions(
-            stateMachineArn='arn:aws:states:REGION:ACCOUNTID:stateMachine:LambdaSubMinute',
-            statusFilter='RUNNING'
-        )
-        return {
-            'alreadyRunning': len(response['executions']) > 1
-    ```
-
-
-## Archive
-- [X] Use Terraform Docker image
-    - NOT DO because the mans who conduct Terraform ought to be the man who's in charge of everything, so they should install all envs like: AWS CLI, Terraform and etc.
+- To deal with concurrency for the Lambda function
+    - Ref:
+        ```python
+        import boto3
+        client = boto3.client('stepfunctions')
+        def lambda_handler(event, context):
+            response = client.list_executions(
+                stateMachineArn='arn:aws:states:REGION:ACCOUNTID:stateMachine:LambdaSubMinute',
+                statusFilter='RUNNING'
+            )
+            return {
+                'alreadyRunning': len(response['executions']) > 1
+        ```
