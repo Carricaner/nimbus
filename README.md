@@ -33,20 +33,20 @@ Since AWS doesn’t provide a scheduler with period of second-level time resolut
     
     ```terraform
     terraform {
-    backend "s3" {
-        bucket         = <the-bucket>
-        key            = <the-object-key>
-        region         = <the-regions>
-        encrypt        = true
-        dynamodb_table = <the-table-name>
-    }
-
-    required_providers {
-        aws = {
-        source  = "hashicorp/aws"
-        version = "~> 5.80"
+        backend "s3" {
+            bucket         = <the-bucket>
+            key            = <the-object-key>
+            region         = <the-regions>
+            encrypt        = true
+            dynamodb_table = <the-table-name>
         }
-    }
+
+        required_providers {
+            aws = {
+                source  = "hashicorp/aws"
+                version = "~> 5.80"
+            }
+        }
     }
     ```
 
@@ -62,7 +62,7 @@ Since AWS doesn’t provide a scheduler with period of second-level time resolut
     make apply
     ```
 
-## Other Notes
+## Notes
 - After moving into the env folder, apply it with a command like
     
     ```bash
@@ -72,7 +72,7 @@ Since AWS doesn’t provide a scheduler with period of second-level time resolut
     ```
     - The order of files matters, since the latter will overwrite the former's values.
 
-## TODO
+## Future Work
 - To deal with concurrency for the Lambda function
     - Ref:
         ```python
